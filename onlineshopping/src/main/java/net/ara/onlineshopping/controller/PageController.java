@@ -12,8 +12,21 @@ public class PageController {
 	   public ModelAndView index() {
 		   
 		   ModelAndView mv= new ModelAndView("page");
-		   mv.addObject("greeting"," Spring Web Mvc");
+		   mv.addObject("title","Home");
+		   mv.addObject("userClickHome",true);
 		   
 		   return mv;
-	   }	   
+		   }
+
+	   @RequestMapping(value= "/contact")
+	   public ModelAndView contact() {
+		   
+		   ModelAndView mv= new ModelAndView("page");
+		   mv.addObject("title","Contact Us");
+		   mv.addObject("userClickContact",true);
+		   
+		   return mv;
+		   }
+
+
 }
